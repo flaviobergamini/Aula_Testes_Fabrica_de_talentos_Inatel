@@ -1,15 +1,19 @@
 package br.inatel.banco;
 
+import br.inatel.banco.controller.ManipulaConta;
 import br.inatel.banco.services.ContaBaseService;
 import br.inatel.banco.services.ContaCorrenteService;
 import br.inatel.banco.services.ContaPoupancaService;
-
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("-------------Inatel Bank----------------");
 
+        ManipulaConta Conta = new ManipulaConta();
+
+        Conta.menuInicial();
+
+        /*
         ContaCorrenteService ContaCorrente =
                 new ContaCorrenteService("1111", "1234567-8");
 
@@ -33,6 +37,6 @@ public class Main {
         ContaPoupanca.pagarConta(99.90, "Internet");
         ContaPoupanca.adicionaRendimento();
         System.out.println("Rendimento: " + ContaPoupanca.consultaRendimento());
-        ContaPoupanca.consultaEstrato();
+        ContaPoupanca.consultaEstrato();  */
     }
 }
